@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مواقيت الصلاة - إسلام بوك</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand"><a href="index.html"><i class="fas fa-mosque"></i> إسلام بوك</a></div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+      <li><a href="azkar.html"><i class="fas fa-pray"></i> الأذكار</a></li>
+      <li><a href="quran.html"><i class="fas fa-quran"></i> القرآن الكريم</a></li>
+      <li><a href="hadith.html"><i class="fas fa-book-open"></i> الحديث</a></li>
+      <li><a href="prayer.html" class="active"><i class="fas fa-clock"></i> مواقيت الصلاة</a></li>
+      <li><a href="tasbih.html"><i class="fas fa-circle-dot"></i> السبحة</a></li>
+      <li><a href="names.html"><i class="fas fa-star"></i> أسماء الله</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1><i class="fas fa-clock"></i> مواقيت الصلاة</h1>
+</div>
+
+<section class="container" style="padding:2rem 1rem">
+  <div class="location-bar">
+    <input type="text" id="cityInput" placeholder="أدخل اسم المدينة..." class="search-input" style="flex:1">
+    <button id="detectLocation" class="btn-primary"><i class="fas fa-location-dot"></i> موقعي</button>
+    <button id="searchCity" class="btn-secondary"><i class="fas fa-search"></i> بحث</button>
+  </div>
+  <div id="locationLabel" style="text-align:center;color:var(--blue-300);margin:.5rem 0"></div>
+
+  <div class="prayer-countdown" id="nextPrayerBox" style="display:none">
+    <span id="nextPrayerLabel">الصلاة القادمة:</span>
+    <span id="nextPrayerName" class="prayer-name-big"></span>
+    <div id="countdown" class="countdown"></div>
+  </div>
+
+  <div class="prayer-grid" id="prayerGrid">جارٍ التحميل...</div>
+
+  <div class="qibla-section">
+    <h2 class="section-title"><i class="fas fa-compass"></i> اتجاه القبلة</h2>
+    <div class="qibla-box">
+      <canvas id="qiblaCanvas" width="200" height="200"></canvas>
+      <div id="qiblaAngle">جارٍ الحساب...</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><p>إسلام بوك &copy; 2025 — مواقيت الصلاة من Aladhan API</p></div></footer>
+<script src="js/prayer.js"></script>
+</body>
+</html>

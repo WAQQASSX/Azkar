@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الحديث الشريف - إسلام بوك</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand"><a href="index.html"><i class="fas fa-mosque"></i> إسلام بوك</a></div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+      <li><a href="azkar.html"><i class="fas fa-pray"></i> الأذكار</a></li>
+      <li><a href="quran.html"><i class="fas fa-quran"></i> القرآن الكريم</a></li>
+      <li><a href="hadith.html" class="active"><i class="fas fa-book-open"></i> الحديث</a></li>
+      <li><a href="prayer.html"><i class="fas fa-clock"></i> مواقيت الصلاة</a></li>
+      <li><a href="tasbih.html"><i class="fas fa-circle-dot"></i> السبحة</a></li>
+      <li><a href="names.html"><i class="fas fa-star"></i> أسماء الله</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1><i class="fas fa-book-open"></i> الحديث الشريف</h1>
+</div>
+
+<section class="container" style="padding:2rem 1rem">
+  <div class="hadith-books">
+    <button class="tab-btn active" data-book="bukhari">صحيح البخاري</button>
+    <button class="tab-btn" data-book="muslim">صحيح مسلم</button>
+    <button class="tab-btn" data-book="tirmidhi">سنن الترمذي</button>
+    <button class="tab-btn" data-book="abudawud">سنن أبي داود</button>
+    <button class="tab-btn" data-book="ibnmajah">سنن ابن ماجه</button>
+    <button class="tab-btn" data-book="nasai">سنن النسائي</button>
+  </div>
+
+  <div class="hadith-search-bar">
+    <input type="number" id="hadithNum" placeholder="رقم الحديث" min="1" style="width:150px">
+    <button id="loadHadith" class="btn-primary"><i class="fas fa-search"></i> بحث</button>
+    <button id="randomHadith" class="btn-secondary"><i class="fas fa-random"></i> حديث عشوائي</button>
+  </div>
+
+  <div id="hadithDisplay" class="hadith-display-box">
+    <p style="text-align:center;color:var(--blue-300)">اختر كتاباً وأدخل رقم الحديث</p>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><p>إسلام بوك &copy; 2025 — بيانات الحديث من HadithAPI</p></div></footer>
+<script src="js/hadith.js"></script>
+</body>
+</html>

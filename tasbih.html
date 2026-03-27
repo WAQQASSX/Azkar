@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>السبحة - إسلام بوك</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand"><a href="index.html"><i class="fas fa-mosque"></i> إسلام بوك</a></div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+      <li><a href="azkar.html"><i class="fas fa-pray"></i> الأذكار</a></li>
+      <li><a href="quran.html"><i class="fas fa-quran"></i> القرآن الكريم</a></li>
+      <li><a href="hadith.html"><i class="fas fa-book-open"></i> الحديث</a></li>
+      <li><a href="prayer.html"><i class="fas fa-clock"></i> مواقيت الصلاة</a></li>
+      <li><a href="tasbih.html" class="active"><i class="fas fa-circle-dot"></i> السبحة</a></li>
+      <li><a href="names.html"><i class="fas fa-star"></i> أسماء الله</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1><i class="fas fa-circle-dot"></i> السبحة الإلكترونية</h1>
+</div>
+
+<section class="container tasbih-container">
+  <div class="tasbih-select">
+    <select id="tasbihPhrase">
+      <option value="سبحان الله">سبحان الله</option>
+      <option value="الحمد لله">الحمد لله</option>
+      <option value="الله أكبر">الله أكبر</option>
+      <option value="لا إله إلا الله">لا إله إلا الله</option>
+      <option value="أستغفر الله">أستغفر الله</option>
+      <option value="لا حول ولا قوة إلا بالله">لا حول ولا قوة إلا بالله</option>
+      <option value="custom">نص مخصص...</option>
+    </select>
+    <input type="text" id="customPhrase" placeholder="أدخل الذكر المخصص..." style="display:none" class="search-input">
+  </div>
+
+  <div class="tasbih-target">
+    <label>الهدف: </label>
+    <button class="target-btn" data-val="33">33</button>
+    <button class="target-btn" data-val="99">99</button>
+    <button class="target-btn" data-val="100">100</button>
+    <button class="target-btn" data-val="0">بلا حد</button>
+  </div>
+
+  <div class="tasbih-display">
+    <div class="tasbih-phrase-display" id="phraseDisplay">سبحان الله</div>
+    <div class="tasbih-counter" id="tasbihCounter">0</div>
+    <div class="tasbih-total">المجموع الكلي: <span id="totalCount">0</span></div>
+    <div class="tasbih-progress" id="progressBar" style="display:none">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+
+  <button class="tasbih-btn" id="tasbihBtn">اضغط للتسبيح</button>
+
+  <div class="tasbih-controls">
+    <button id="resetCurrent" class="ctrl-btn"><i class="fas fa-redo"></i> إعادة</button>
+    <button id="resetAll" class="ctrl-btn danger"><i class="fas fa-trash"></i> مسح الكل</button>
+    <label class="ctrl-btn">
+      <input type="checkbox" id="soundToggle" checked> <i class="fas fa-volume-up"></i> الصوت
+    </label>
+    <label class="ctrl-btn">
+      <input type="checkbox" id="vibrateToggle" checked> <i class="fas fa-mobile-alt"></i> الاهتزاز
+    </label>
+  </div>
+
+  <div class="tasbih-history">
+    <h3>سجل الجلسة</h3>
+    <div id="historyList"></div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><p>إسلام بوك &copy; 2025</p></div></footer>
+<script src="js/tasbih.js"></script>
+</body>
+</html>
